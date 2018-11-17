@@ -10,7 +10,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     private String[] ids;
 
     private ArrayAdapter<String> arrayAdapter;
-    private ListView list_children;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +35,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        list_children = findViewById(R.id.childList);
+        ListView list_children = findViewById(R.id.childList);
         list_children.setTextFilterEnabled(true);
-        String[] childrenName = getChildren();
+        final String[] childrenName = getChildren();
 
         arrayAdapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_list_item_1, childrenName
@@ -50,9 +49,16 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(MainActivity.this, ChildActivity.class);
-                Log.d("Running Message: ", "int " + i + ", long " + l);
-                intent.putExtra("id", ids[i]);
-
+                String selectedFromList = (String) ((TextView)view).getText();
+                //Log.d("MyMessage", selectedFromList);
+                for(int j = 0; j < childrenName.length; j++){
+                    if(childrenName[j].equalsIgnoreCase(selectedFromList)){
+                        //Log.d("MyMessage", j + ". " + childrenName[j]);
+                        //Log.d("MyMessage", ids[j] + " not " + ids[i]);
+                        intent.putExtra("id", ids[j]);
+                        break;
+                    }
+                }
                 startActivity(intent);
             }
         });
