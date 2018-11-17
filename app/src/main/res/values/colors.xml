@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="backColour">#e4ffc9</color>
+    <color name="barColour">#7fd827</color>
+    <color name="titleTextColour">#03661a</color>
+    <color name="textColour">#e50e06</color>
 </resources>
