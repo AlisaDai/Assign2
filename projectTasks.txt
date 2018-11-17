@@ -1,0 +1,12 @@
+Oct 15.
+Display Local events
+Directions API
+Draw routes on map
+
+Oct 22.
+Put it up in firebase
+Direct user using custom safe routes based on dataset
+
+
+
+

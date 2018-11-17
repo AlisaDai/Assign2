@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertChildActivity">
+
+    <include layout="@layout/toolbar_main" android:id="@+id/toolbar" />
+
+    <TableRow>
+        <TextView
+            android:id="@+id/firstNameLabel"
+            android:textSize="16sp"
+            android:text="@string/firstName"/>
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/lastNameLabel"
+            android:textSize="16sp"
+            android:text="@string/lastName" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="textPersonName" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/birthDateLabel"
+            android:textSize="16sp"
+            android:text="@string/birthDate" />
+
+        <EditText
+            android:id="@+id/birthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:inputType="date" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/streetLabel"
+            android:textSize="16sp"
+            android:text="@string/street" />
+
+        <EditText
+            android:id="@+id/street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:inputType="textPersonName" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/cityLabel"
+            android:textSize="16sp"
+            android:text="@string/city" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/provinceLabel"
+            android:textSize="16sp"
+            android:text="@string/province" />
+
+        <EditText
+            android:id="@+id/province"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/countryLabel"
+            android:textSize="16sp"
+            android:text="@string/country" />
+
+        <EditText
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+        <TextView
+            android:id="@+id/postalCodeLabel"
+            android:textSize="16sp"
+            android:text="@string/postalCode" />
+
+        <EditText
+            android:id="@+id/postalCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/latitudeLabel"
+            android:textSize="16sp"
+            android:text="@string/latitude" />
+
+        <EditText
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned" />
+        <TextView
+            android:id="@+id/longitudeLabel"
+            android:textSize="16sp"
+            android:text="@string/longitude" />
+
+        <EditText
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned" />
+    </TableRow>
+    <TableRow>
+        <CheckBox
+            android:id="@+id/isNaughty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_span="4"
+            android:text="@string/isNaughty" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/save"
+            android:layout_column="1"
+            android:text="@string/save"/>
+        <Button
+            android:id="@+id/cancel"
+            android:layout_column="2"
+            android:text="@string/cancel"/>
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Snaydon_Dai_Assign2</string>
+    <string name="plus">Add</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="search_hint">Name</string>
+
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="birthDate">Birth Date</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="province">Province</string>
+    <string name="postalCode">Postal Code</string>
+    <string name="country">Country</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="isNaughty">Naughty</string>
+</resources>
